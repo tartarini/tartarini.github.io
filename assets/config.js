@@ -8,7 +8,7 @@ window.SITE = {
   email: "d.tartarini@sheffield.ac.uk",
   // Downloaded from your Google Scholar profile at each build (see deploy.yml).
   // To use your own picture instead, add assets/photo.jpg to the repository.
-  photo: "assets/photo.jpg",
+  photo: "assets/photo.png",
 
   bio: `I am a Senior Research Software Engineer in the School of Computer Science at the University of Sheffield. 
   Sheffield Centre for Cancer Research, University of Sheffield.
