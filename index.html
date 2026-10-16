@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Academic Homepage</title>
+  <meta name="description" content="Academic homepage: research, publications and interactive notebooks.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div id="avatar" class="avatar" aria-hidden="true"></div>
+      <div>
+        <h1 id="name"></h1>
+        <p class="role"><span id="title"></span> · <span id="affiliation"></span></p>
+        <nav id="links" class="links" aria-label="Profiles"></nav>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tabs wrap" aria-label="Sections">
+    <a href="#about">About</a><a href="#publications">Publications</a><a href="#notebooks">Notebooks</a><a href="#contact">Contact</a>
+  </nav>
+
+  <main class="wrap">
+    <section id="about">
+      <h2>About</h2>
+      <p id="bio"></p>
+      <ul id="interests" class="chips"></ul>
+    </section>
+
+    <section id="publications">
+      <div class="section-head">
+        <h2>Publications</h2>
+        <a id="orcid-src" class="muted small" target="_blank" rel="noopener"></a>
+      </div>
+      <div class="pub-tools">
+        <input id="pub-filter" type="search" placeholder="Filter by title, venue or year…" aria-label="Filter publications">
+      </div>
+      <div id="pubs"><p class="muted">Loading publications from ORCID…</p></div>
+    </section>
+
+    <section id="notebooks">
+      <h2>Interactive notebooks</h2>
+      <p class="muted">These Jupyter notebooks run directly in your browser — nothing to install.</p>
+      <div id="nb-list" class="cards"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p><a id="email"></a></p>
+    </section>
+  </main>
+
+  <footer class="wrap muted small">© <span id="year"></span> <span id="foot-name"></span></footer>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/site.js"></script>
+</body>
+</html>
