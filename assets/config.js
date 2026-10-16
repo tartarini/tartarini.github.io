@@ -10,11 +10,11 @@ window.SITE = {
   // To use your own picture instead, add assets/photo.jpg to the repository.
   photo: "assets/photo.jpg",
 
-  bio: `I am a Senior Research Software Engineer in the School of Computer Science at the University of Sheffield. Replace this
-        paragraph with a short description of your research, background
-        and current projects.`,
+  bio: `I am a Senior Research Software Engineer in the School of Computer Science at the University of Sheffield. 
+  Sheffield Centre for Cancer Research, University of Sheffield.
+  INSIGNEO Institute for Healthcare Technology`,
 
-  interests: ["Research interest one", "Research interest two", "Research interest three"],
+  interests: ["Cancer", "Computational Biomedicine", "Human Digital Twin", "Machine learning", "Software as Medical Devices"],
 
   // Profiles — leave any of these "" to hide the button
   orcid:    "0000-0002-8913-0156",
