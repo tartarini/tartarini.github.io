@@ -2,7 +2,7 @@
 //  EDIT THIS FILE — everything on the site comes from here.
 // ─────────────────────────────────────────────────────────────
 window.SITE = {
-  name: "Dr D. Tartarini",
+  name: "Dr Daniele Tartarini",
   title: "Researcher",            // TODO: your role, e.g. "Research Fellow"
   affiliation: "University of Sheffield",   // TODO: add department
   email: "d.tartarini@sheffield.ac.uk",
@@ -15,8 +15,8 @@ window.SITE = {
   interests: ["Research interest one", "Research interest two", "Research interest three"],
 
   // Profiles — leave any of these "" to hide the button
-  orcid:    "0000-0000-0000-0000",          // TODO: your 16-digit ORCID iD
-  linkedin: "https://www.linkedin.com/in/your-handle",   // TODO
+  orcid:    "0000-0002-8913-0156",
+  linkedin: "https://www.linkedin.com/in/danieletartarini/",
   website:  "",                              // another personal site, if you have one
   scholar:  "",                              // Google Scholar profile URL
   github:   "https://github.com/tartarini",
