@@ -1,4 +1,6 @@
-# Academic homepage
+# tartarini.github.io
+
+Source for https://tartarini.github.io — academic homepage.
 
 A one-page academic site with:
 - **ORCID, LinkedIn, website, Google Scholar, GitHub** profile buttons
@@ -13,7 +15,7 @@ Optional: add `assets/photo.jpg` and set `photo: "assets/photo.jpg"`.
 Drop `.ipynb` files into `notebooks/` and add an entry to `notebooks` in `config.js`.
 In-browser notebooks support pure-Python packages plus NumPy, pandas, Matplotlib, SciPy, scikit-learn
 (install them with `%pip install ...` in the first cell). For heavy or compiled dependencies,
-set `binderRepo` to get a "Binder" button (add a `requirements.txt` listing the packages).
+list the packages in `binder/requirements.txt` (used by the "Binder" buttons).
 
 ## 3. Publish on GitHub Pages (free)
 1. Create a GitHub repo named **`<username>.github.io`** (gives you `https://<username>.github.io`).

@@ -3,8 +3,8 @@
 // ─────────────────────────────────────────────────────────────
 window.SITE = {
   name: "Dr D. Tartarini",
-  title: "Researcher",
-  affiliation: "University of Sheffield",
+  title: "Researcher",            // TODO: your role, e.g. "Research Fellow"
+  affiliation: "University of Sheffield",   // TODO: add department
   email: "d.tartarini@sheffield.ac.uk",
   photo: "",                      // e.g. "assets/photo.jpg" (leave "" for initials)
 
@@ -15,11 +15,11 @@ window.SITE = {
   interests: ["Research interest one", "Research interest two", "Research interest three"],
 
   // Profiles — leave any of these "" to hide the button
-  orcid:    "0000-0000-0000-0000",          // just the 16-digit iD
-  linkedin: "https://www.linkedin.com/in/your-handle",
+  orcid:    "0000-0000-0000-0000",          // TODO: your 16-digit ORCID iD
+  linkedin: "https://www.linkedin.com/in/your-handle",   // TODO
   website:  "",                              // another personal site, if you have one
   scholar:  "",                              // Google Scholar profile URL
-  github:   "",                              // e.g. "https://github.com/username"
+  github:   "https://github.com/tartarini",
 
   // Publications are pulled live from ORCID. Anything listed here is
   // shown as well (useful for items not yet on ORCID).
@@ -37,5 +37,5 @@ window.SITE = {
       description: "A short demo: generate data, fit a curve and plot it with NumPy and Matplotlib."
     }
   ],
-  binderRepo: "",                           // e.g. "username/username.github.io" to enable Binder links
+  binderRepo: "tartarini/tartarini.github.io",  // enables "Binder" buttons
 };
