@@ -32,7 +32,7 @@ jobs:
           touch _site/.nojekyll
       - name: Fetch profile photo from Google Scholar (unless assets/photo.jpg exists)
         if: hashFiles('assets/photo.jpg') == ''
-        continue-on-error: true
+        continue-on-error: true   # never block a deploy over the photo
         run: |
           UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36"
           PHOTO=$(curl -fsSL -A "$UA" "https://scholar.google.com/citations?user=j432ndQAAAAJ&hl=en" \
@@ -40,8 +40,12 @@ jobs:
           echo "Photo URL: $PHOTO"
           case "$PHOTO" in /*) PHOTO="https://scholar.google.com$PHOTO" ;; esac
           PHOTO="${PHOTO/view_op=view_photo/view_op=medium_photo}"
-          curl -fsSL -A "$UA" -o _site/assets/photo.jpg "$PHOTO"
-          file _site/assets/photo.jpg | grep -qiE 'image|JPEG|PNG' || { echo "Not an image"; rm -f _site/assets/photo.jpg; exit 1; }
+          if curl -fsSL -A "$UA" -o _site/assets/photo.jpg "$PHOTO" && file _site/assets/photo.jpg | grep -qiE 'image|JPEG|PNG'; then
+            echo "::notice::Profile photo downloaded from Google Scholar"
+          else
+            rm -f _site/assets/photo.jpg
+            echo "::warning::Could not download the Google Scholar photo (initials shown instead). Add assets/photo.jpg to the repository to set it manually."
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
