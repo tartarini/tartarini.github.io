@@ -3,12 +3,14 @@
 // ─────────────────────────────────────────────────────────────
 window.SITE = {
   name: "Dr Daniele Tartarini",
-  title: "Researcher",            // TODO: your role, e.g. "Research Fellow"
-  affiliation: "University of Sheffield",   // TODO: add department
+  title: "Senior Research Software Engineer",
+  affiliation: "School of Computer Science, University of Sheffield, UK",
   email: "d.tartarini@sheffield.ac.uk",
-  photo: "",                      // e.g. "assets/photo.jpg" (leave "" for initials)
+  // Downloaded from your Google Scholar profile at each build (see deploy.yml).
+  // To use your own picture instead, add assets/photo.jpg to the repository.
+  photo: "assets/photo.jpg",
 
-  bio: `I am a researcher at the University of Sheffield. Replace this
+  bio: `I am a Senior Research Software Engineer in the School of Computer Science at the University of Sheffield. Replace this
         paragraph with a short description of your research, background
         and current projects.`,
 
@@ -18,7 +20,7 @@ window.SITE = {
   orcid:    "0000-0002-8913-0156",
   linkedin: "https://www.linkedin.com/in/danieletartarini/",
   website:  "",                              // another personal site, if you have one
-  scholar:  "",                              // Google Scholar profile URL
+  scholar:  "https://scholar.google.com/citations?user=j432ndQAAAAJ&hl=en",
   github:   "https://github.com/tartarini",
 
   // Publications are pulled live from ORCID. Anything listed here is

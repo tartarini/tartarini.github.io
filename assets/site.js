@@ -16,8 +16,13 @@
   $("interests").innerHTML = (S.interests || []).map((i) => `<li>${esc(i)}</li>`).join("");
 
   const av = $("avatar");
-  if (S.photo) av.style.backgroundImage = `url("${S.photo}")`;
-  else av.textContent = S.name.replace(/^(Dr|Prof)\.?\s+/i, "").split(/\s+/).map((w) => w[0]).join("").slice(0, 2);
+  const initials = () => { av.textContent = S.name.replace(/^(Dr|Prof)\.?\s+/i, "").split(/\s+/).map((w) => w[0]).join("").slice(0, 2); };
+  if (S.photo) {
+    const img = new Image();
+    img.onload = () => { av.style.backgroundImage = `url("${S.photo}")`; };
+    img.onerror = initials;
+    img.src = S.photo;
+  } else initials();
 
   // Profile links
   const icon = {

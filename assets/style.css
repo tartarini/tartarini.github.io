@@ -24,6 +24,7 @@ a { color: var(--accent); }
 
 .hero { background: var(--hero); color: var(--hero-text); padding: 48px 0 40px; }
 .hero-inner { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; }
+.hero-inner > div:last-child { flex: 1 1 320px; }
 .hero h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.5rem); }
 .role { margin: 4px 0 16px; opacity: .85; }
 .avatar { width: 112px; height: 112px; border-radius: 50%; flex: none;
